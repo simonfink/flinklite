@@ -56,7 +56,7 @@ int flink_wd_get_status(flink_subdev* subdev, uint8_t* status){
 	
 	offset = HEADER_SIZE + SUBHEADER_SIZE + REGISTER_WITH;
 	
-	if(flink_read_bit(subdev, offset, 0, &status)) {
+	if(flink_read_bit(subdev, offset, 0, status)) {
 		return EXIT_ERROR;
 	}
 	
